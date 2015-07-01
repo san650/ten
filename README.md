@@ -1,7 +1,35 @@
-Ten ember apps
-==============
+# Ten Dummy Applications
 
-La idea es aprender Ember creando distintas aplicaciones web. Te damos los prototipos (HTML, CSS y otros assets)
-para que puedas crear las aplicaciones Ember utilizando ember-cli.
+Learn how to build web applications by doing
 
-Aquí podrás encontrar 10 prototipos de aplicaciones listos para crear aplicaciones Ember.
+## What is Ten Dummy Applications?
+
+The idea of this project is to build ten web application templates to help
+people learn how to build web applications using different JavaScript
+frameworks.
+
+We provide users with HTML, CSS and other assets files plus some pointers of how
+the application should behave and some useful resources such as third party web
+services to fetch/store data.
+
+## Development
+
+### Installation
+
+* git clone this repository
+* npm install
+
+### Running
+
+* gulp serve
+* Visit the site at http://localhost:3000.
+
+### Building
+
+* gulp build
+
+## License
+
+ten-dummy-applications is licensed under the MIT license.
+
+See [LICENSE](LICENSE) for the full license text.
