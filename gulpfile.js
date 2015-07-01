@@ -4,15 +4,23 @@ var gulp = require('gulp'),
     iif = require('gulp-if'),
     sass = require('gulp-sass'),
     cssbeautify = require('gulp-cssbeautify'),
+    htmlprettify = require('gulp-prettify'),
     del = require('del'),
-    browserSync = require('browser-sync');
+    browserSync = require('browser-sync'),
+    fileinclude = require('gulp-file-include');
 
 // Process app templates folder
 gulp.task('buildTemplates', ['clean'], function() {
   return gulp
-    .src('apps/**')
+    .src(['apps/**', '!apps/**/templates/', '!apps/**/templates/*.html'])
+    // generate sass
     .pipe(iif('*.scss', sass()))
+    // beautify css
     .pipe(iif('*.css', cssbeautify({ indent: '  ' })))
+    // process includes in html
+    .pipe(iif('*.html', fileinclude()))
+    // beautify html
+    .pipe(iif('*.html', htmlprettify({indent_size: 4, preserve_newlines: false, end_with_newline: true, extra_liners: [], unformatted: []})))
     .pipe(gulp.dest('dist'));
 });
 
