@@ -1,0 +1,17 @@
+{
+  "name": "ten-ember-apps",
+  "version": "0.0.1",
+  "description": "Learn Ember by doing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Ember",
+    "CSS",
+    "HTML",
+    "JavaScript"
+  ],
+  "author": "Santiago Ferreira",
+  "license": "GPL"
+}
