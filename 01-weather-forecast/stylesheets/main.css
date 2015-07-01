@@ -1,0 +1,144 @@
+body {
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  color: #fff;
+}
+
+a,
+a:link,
+a:visited,
+a:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  text-align: left;
+}
+
+/* layout */
+html, body {
+  height: auto;
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  width: 80%;
+  background-color: rgba(100, 100, 100, 0.5);
+  padding: 10px;
+  margin: 20px auto;
+
+  text-align: center;
+}
+
+/* Forecast */
+.weather {
+  background-color: transparent;
+  background-attachment: initial;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.drizzle {
+  background-image: url(../images/weather_rain_002.jpg);
+}
+
+.sunny {
+  background-image: url(../images/weather_sunny.jpg);
+}
+
+.today {
+  font-weight: lighter;
+  font-size: 3em;
+  line-height: 1em;
+}
+
+.today .city,
+.today .day,
+.today .icon {
+  display: block;
+}
+
+.today .day {
+  font-size: 0.5em;
+}
+
+.today .icon {
+  font-size: 2.5em;
+  line-height: 1.8em;
+}
+
+/* clearfix for aside */
+aside {
+  overflow: auto;
+  zoom: 1;
+}
+
+aside:after {
+ content: " ";
+ clear: both;
+}
+
+aside .icon {
+  font-size: 4em;
+}
+
+aside .condition {
+  display: inline-block;
+}
+
+aside .temp {
+  font-size: 2.333em;
+  display: block;
+}
+
+aside .code {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  aside article {
+    width: 33%;
+    float: left;
+  }
+}
+
+/* Search */
+.search {
+  background-image: url(../images/weather_search.jpg);
+}
+
+.search input {
+  width: 75%;
+  font-size: 2.333em;
+  line-height: 1.6em;
+  border: 1px solid #fff;
+  padding: 5px 20px;
+}
+
+.search ul {
+  list-style: none;
+  font-size: 1.666em;
+  width: 75%;
+  margin: 20px auto;
+  text-align: left;
+}
+
+@media (min-width: 992px) {
+  .search ul {
+    font-size: 2.333em;
+  }
+}
+
+/* reference sizes */
+@media (max-width: 768px) {}
+
+@media (min-width: 768px) and (max-width: 992px) {}
+
+@media (min-width: 992px) and (max-width: 1200px) {}
+
+@media (min-width: 1200px) {}
