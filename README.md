@@ -1,10 +1,10 @@
-# Ten Dummy Applications
+# Ten
 
 Learn how to build web applications by doing
 
-## What is Ten Dummy Applications?
+## What is Ten?
 
-The idea of this project is to build ten web application templates to help
+The idea of this project is to build _ten_ web application templates to help
 people learn how to build web applications using different JavaScript
 frameworks.
 
@@ -30,6 +30,6 @@ services to fetch/store data.
 
 ## License
 
-ten-dummy-applications is licensed under the MIT license.
+__ten__ is licensed under the MIT license.
 
 See [LICENSE](LICENSE) for the full license text.

@@ -1,7 +1,7 @@
 {
-  "name": "tda",
+  "name": "Ten",
   "version": "0.0.0",
-  "description": "Ten Dummy Applications: Learn how to build web applications by doing",
+  "description": "Ten: Learn how to build web applications by doing",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
