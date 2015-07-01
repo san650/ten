@@ -17,12 +17,17 @@ header {
 }
 
 /* layout */
-html, body {
+html,
+body,
+body > .ember-view,
+.weather {
   height: auto;
   min-height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
+  overflow: auto;
+  position: absolute;
 }
 
 .content {
@@ -126,6 +131,8 @@ aside .code {
   width: 75%;
   margin: 20px auto;
   text-align: left;
+  max-height: 400px;
+  overflow: auto;
 }
 
 @media (min-width: 992px) {
