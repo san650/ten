@@ -1,0 +1,56 @@
+@@include('./templates/page-top.html')
+
+<h2 class="headline">Empty search result template</h2>
+
+<article class="search">
+  <fieldset>
+    <input placeholder="book title or author name..." value="Dostoievski@">
+    <button>Search</button>
+  </fieldset>
+
+  <h3>Results</h3>
+
+  <div class="content">
+    <p class="alternate">No results found for <strong>Dostoievski@</strong></p>
+  </div>
+
+  <p>
+    Didn't find your book? <a href="add.html">Create it</a>.
+  </p>
+</article>
+
+<h2 class="headline">Empty "To read next" list template</h2>
+
+<article class="book-group">
+  <h3>To read next <span>(0)</span></h3>
+
+  <div class="content">
+    <p class="alternate">
+      Don't have books to read next? Try the <strong><a href="search.html">search</a></strong> or pick one from these lists
+    </p>
+    <ul class="alternate">
+      <li>
+        <a href="http://entertainment.time.com/2005/10/16/all-time-100-novels/slide/all/" rel="external">
+          All-Time 100 novels by Time Magazine
+        </a>
+      </li>
+      <li>
+        <a href="http://www.theguardian.com/books/series/the-100-best-novels" rel="external">
+          The 100 best novels by The Guardian
+        </a>
+      </li>
+      <li>
+        <a href="http://www.telegraph.co.uk/culture/books/4248401/100-novels-everyone-should-read.html" rel="external">
+          100 novels everyone should read by The Telegraph
+        </a>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<h2 class="headline">Empty page template</h2>
+
+<p class="alternate">
+  Don't have books yet? Try the <strong><a href="search.html">search</a>.</strong>
+</p>
+@@include('./templates/page-bottom.html')

@@ -67,12 +67,6 @@ h3 {
   letter-spacing: 0.06em;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 a,
 a:link,
 a:visited,
@@ -182,7 +176,9 @@ button:hover {
   padding: 50px 10px;
 
   ul {
-    margin-bottom: 20px;
+    list-style: none;
+    margin: 0 0 20px;
+    padding: 0;
   }
 
   li {
@@ -237,14 +233,6 @@ button:hover {
   li {
     margin-bottom: 7px;
   }
-
-  .action {
-    font-family: $font-family-monospace;
-    font-size: $font-size-smaller;
-    color: $color-foreground-dim;
-    text-decoration: underline;
-    margin-left: 5px;
-  }
 }
 
 .biography {
@@ -285,6 +273,14 @@ button:hover {
   h3 {
     font-weight: $font-weight-light;
   }
+
+  .action {
+    font-family: $font-family-monospace;
+    font-size: $font-size-smaller;
+    color: $color-foreground-dim;
+    text-decoration: underline;
+    margin-left: 5px;
+  }
 }
 
 .search,
@@ -296,4 +292,13 @@ button:hover {
   h3 {
     margin-top: 40px;
   }
+}
+
+h2.headline {
+  margin-bottom: 50px;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+h2.headline:not(:first-of-type) {
+  margin-top: 100px;
 }
