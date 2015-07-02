@@ -1,18 +1,25 @@
 // Colors ---------------------------
 $color-background: #ffffff;
+$color-alternate-background: #f6f6ef;
 $color-foreground: #3d3c40;
 $color-foreground-dim: #9e9ea6;
 $color-highlight: #2a80b9;
 
-$color-inverse-background: #4D394B;
+$color-inverse-background: #332732;
 $color-inverse-foreground: #ab9ba9;
-$color-inverse-highlight: #ffffff;
+$color-inverse-highlight: #dfdfdf;
+
+$color-inverse-alternate-background: #4D394B;
+$color-inverse-alternate-foreground: #ab9ba9;
+
+$shadow: -1px 0 12.5px rgba(0,0,0,1);
 
 // Fonts ----------------------------
 $font-family-title: "Helvetica Neue",Helvetica,Arial,sans-serif; // Good for titles
 $font-family-text: "Helvetica Neue",Helvetica,Arial,sans-serif; // Good for text
 $font-family-monospace: Menlo,Monaco,Consolas,"Courier New",monospace;
 
+$font-size-smaller: 10px;
 $font-size-small: 12px;
 $font-size-normal: 14px;
 $font-size-big: 21px;
@@ -40,7 +47,7 @@ body {
 h1,
 h2,
 h3 {
-  margin: 0 0 5px;
+  margin: 0 0 10px;
   padding: 0;
   font: normal normal $font-weight-bold $font-size-big $font-family-title;
   line-height: $font-size-big;
@@ -84,8 +91,8 @@ body {
   height: 40px;
 }
 
-.content {
-  min-height: calc(100%);
+.container {
+  min-height: calc(100% - 40px);
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -99,12 +106,27 @@ body {
 .main {
   order: 2;
   flex: 1;
+
+  & > .article {
+    margin: 40px 40px;
+  }
 }
 
 // Theme ----------------------------
 .nav-bar {
   background-color: $color-inverse-background;
   color: $color-inverse-foreground;
+}
+
+.header {
+  position: relative;
+  box-shadow: $shadow;
+  background-color: $color-inverse-alternate-background;
+  color: $color-inverse-alternate-foreground;
+}
+
+.main {
+  background-color: $color-alternate-background;
 }
 
 // Components -----------------------
@@ -124,6 +146,7 @@ body {
   }
 
   a.is-active {
+    color: $color-inverse-highlight;
     margin-left: 0;
 
     &:hover {
@@ -133,13 +156,13 @@ body {
 
     &:before {
       content: '\25CF\20';
-      opacity: 0.5;
+      opacity: 0.2;
     }
   }
 }
 
 .header {
-  padding: 10px;
+  padding: 10px 0 10px 180px;
 
   h1 {
     font-size: 2em;
@@ -152,13 +175,35 @@ body {
 }
 
 .book-group {
+  margin-bottom: 20px;
+
+  .content {
+    background-color: $color-background;
+    border-radius: 3px;
+    padding: 10px 5px 30px 10px;
+
+    .more {
+      display: block;
+      margin: 30px 0 0 20px;
+      color: $color-foreground-dim;
+      font-size: $font-size-small;
+    }
+  }
+
   h3 span {
     font-size: $font-size-small;
     color: $color-foreground-dim;
     vertical-align: text-top;
   }
+
   li {
     margin-bottom: 7px;
+  }
+
+  .year {
+    color: $color-foreground-dim;
+    font-family: $font-family-monospace;
+    font-size: $font-size-smaller;
   }
 }
 
