@@ -192,6 +192,13 @@ body {
     margin-bottom: 7px;
   }
 
+  .action {
+    font-family: $font-family-monospace;
+    font-size: $font-size-smaller;
+    color: $color-foreground-dim;
+    text-decoration: underline;
+    margin-left: 5px;
+  }
 }
 
 .biography {
