@@ -105,6 +105,10 @@ input, button {
   outline-width: 0;
 }
 
+input {
+  width: 400px;
+}
+
 button {
   appearance: none;
   border: 1px solid;
@@ -283,10 +287,12 @@ button:hover {
   }
 }
 
-.search {
-  input {
-    width: 400px;
+.search,
+.add-book {
+  p > a {
+    text-decoration: underline;
   }
+
   h3 {
     margin-top: 40px;
   }
