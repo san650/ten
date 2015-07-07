@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     htmlprettify = require('gulp-prettify'),
     del = require('del'),
     browserSync = require('browser-sync'),
-    fileinclude = require('gulp-file-include');
+    fileinclude = require('gulp-file-include'),
+    checkPages = require('check-pages');
 
 // Process app templates folder
 gulp.task('buildTemplates', ['clean'], function() {
@@ -47,6 +48,42 @@ gulp.task('serve', ['build'], function () {
   });
 
   gulp.watch(['public/*.*', 'apps/**/*.html', 'apps/**/*.{scss,css}'], ['build', browserSync.reload]);
+});
+
+// Tests
+gulp.task('testServer', ['build'], function(cb) {
+  // http://www.browsersync.io/docs/options/
+  browserSync({ ui: false, open: false, notify: false, server: ['dist'], port: 9000 }, cb);
+});
+
+gulp.task('test', ['testServer'], function(cb) {
+  var options = {
+    pageUrls: [
+      'http://localhost:9000/reading-list/',
+      'http://localhost:9000/reading-list/alternates.html'
+    ],
+    checkLinks: true,
+    summary: true
+  };
+  var errors = [],
+      hasErrors = false;
+
+  var errorConsole = {
+    log:function() {},
+    error: function(msg) {
+      hasErrors = true;
+      errors.push(msg);
+    }
+  };
+
+  checkPages(errorConsole, options, function() {
+    if (hasErrors) {
+      console.error("There are failing tests\n" + errors.join('\n'));
+      process.exit(1);
+    } else {
+      browserSync.exit();
+    }
+  });
 });
 
 gulp.task('default', ['build']);

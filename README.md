@@ -28,6 +28,13 @@ services to fetch/store data.
 
 * gulp build
 
+### Debugging gulp tasks
+
+```sh
+$ npm install -g node-inspector
+$ node-debug $(which gulp) myTask
+```
+
 ## License
 
 __ten__ is licensed under the MIT license.
