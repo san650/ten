@@ -20,7 +20,7 @@ gulp.task('buildTemplates', ['clean'], function() {
     // process includes in html
     .pipe(iif('*.html', fileinclude()))
     // beautify html
-    .pipe(iif('*.html', htmlprettify({indent_size: 4, preserve_newlines: false, end_with_newline: true, extra_liners: [], unformatted: []})))
+    .pipe(iif('*.html', htmlprettify({indent_size: 2, preserve_newlines: false, end_with_newline: true, extra_liners: [], unformatted: []})))
     .pipe(gulp.dest('dist'));
 });
 
