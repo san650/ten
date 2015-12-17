@@ -77,6 +77,10 @@ a:hover {
   font: inherit;
 }
 
+a:not([href]) {
+  cursor: pointer;
+}
+
 a:hover {
   text-decoration: underline;
 }
