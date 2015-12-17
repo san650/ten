@@ -21,7 +21,6 @@ a {
     bottom: 0;
     left: 0;
     min-height: 595px;
-    /*min-width: 1080px;*/
     overflow: hidden;
 }
 
@@ -43,7 +42,7 @@ a {
 #logo{
     display: block;
     height: 95px;
-    background: url('/images/logo.png') no-repeat center;
+    background: url('../images/logo.png') no-repeat center;
     cursor: auto;
 }
 
