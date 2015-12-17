@@ -12,6 +12,11 @@ We provide users with HTML, CSS and other assets files plus some pointers of how
 the application should behave and some useful resources such as third party web
 services to fetch/store data.
 
+## Applications
+
+* [Reading list](./apps/reading-list/README.md)
+* [Music](./apps/music/README.md)
+
 ## Development
 
 ### Installation
